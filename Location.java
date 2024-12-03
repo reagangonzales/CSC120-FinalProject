@@ -1,3 +1,4 @@
+// I used the A7 Building class to create this class
 public class Location {
 
     protected String name;
@@ -83,10 +84,6 @@ public class Location {
         this.activeFloor = floorNum;
     }
 
-    public void goToRoom(int roomNum) {
-        ;
-    }
-
     public void goUp() {
         this.goToFloor(this.activeFloor + 1);
     }
@@ -96,20 +93,45 @@ public class Location {
     }
 
     public void goEast() {
-        ;
+        System.out.println("You head east");
     }
     
     public void goWest() {
-        ;
+        if (this.name.equals("Car")) {
+            System.out.println("You head west");
+        } else if (this.name.equals("Grocery Store")) {
+            System.out.println("You head west");
+        } else if (this.name.equals("Crumbl Shop")) {
+            System.out.println("You head west");
+        } else {
+            System.out.println("There's nothing to the west from here.");
+        }
     }
-
-    public void goSouth() {
-        ;
-    }
-
+    
     public void goNorth() {
-        ;
+        if (this.name.equals("Car")) {
+            System.out.println("You head north");
+        } else if (this.name.equals("House")) {
+            System.out.println("You head north");
+        } else if (this.name.equals("Crumbl Shop")) {
+            System.out.println("You head north");
+        } else {
+            System.out.println("There's nothing to the north from here.");
+        }
     }
+    
+    public void goSouth() {
+        if (this.name.equals("Crumbl Shop")) {
+            System.out.println("You head south");
+        } else if (this.name.equals("Car")) {
+            System.out.println("You head south");
+        } else if (this.name.equals("Grocery Store")) {
+            System.out.println("You head south");
+        } else {
+            System.out.println("There's nothing to the south from here.");
+        }
+    }
+    
 
     public void showOptions() {
         System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n) + \n goEast() + \n goWest() + \n goNorth() + \n goSouth()");
