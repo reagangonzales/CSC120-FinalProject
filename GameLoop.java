@@ -260,12 +260,12 @@ public class GameLoop {
                         boolean hasFlour = player.getInventory().hasItem("flour");
                         boolean hasSugar = player.getInventory().hasItem("sugar");
                         boolean hasEggs = player.getInventory().hasItem("eggs");
-                        boolean hasBakingPowder = player.getInventory().hasItem("baking powder");
-                        boolean hasBakingSoda = player.getInventory().hasItem("baking soda");
+                        boolean hasButter = player.getInventory().hasItem("butter");
                         boolean hasChocolate = player.getInventory().hasItem("chocolate");
-                        boolean hasPB = player.getInventory().hasItem("peanut butter");
+                        boolean hasVanilla = player.getInventory().hasItem("vanilla");
+                        boolean hasBakingPowder = player.getInventory().hasItem("baking powder");
 
-                        if (hasFlour && hasSugar && hasEggs && hasBakingPowder && hasBakingSoda && hasChocolate && hasPB) {
+                        if (hasFlour && hasSugar && hasEggs && hasBakingPowder && hasChocolate && hasButter && hasVanilla) {
                             System.out.println("You have all the ingredients. You leave the grocery store.");
                             inGroceryStore = false;
                         } else {
