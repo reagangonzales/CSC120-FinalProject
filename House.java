@@ -86,8 +86,8 @@ public class House extends Location {
 
     public void showOptions() {
         super.showOptions();
-        System.out.println("Available rooms: entrance, living room, kitchen");
-        System.out.println(" + findItem(item)");
-        System.out.println(" + isReadyToLeave()");
+        System.out.println("Rooms in House: entrance, living room, kitchen");
+        System.out.println(" + find (item)");
+        System.out.println(" + leave house");
     }
 }

@@ -42,10 +42,6 @@ public class Location {
     public String getAddress() {
         return this.address;
     }
-
-    public int getFloors() {
-        return this.nFloors;
-    }
     
     public int getRooms() {
         return this.nRooms;
@@ -61,80 +57,25 @@ public class Location {
         return this; // Return a pointer to the current building
     }
 
-    public Location exit() {
-        if (this.activeFloor == -1) {
-            throw new RuntimeException("You are not inside this Building. Must call enter() before exit().");
-        }
-        if (this.activeFloor > 1) {
-            throw new RuntimeException("You have fallen out a window from floor #" +this.activeFloor + "!");
-        }
-        System.out.println("You have left " + this.name + ".");
-        this.activeFloor = -1; // We're leaving the building, so we no longer have a valid active floor
-        return null; // We're outside now, so the building is null
-    }
-
-    public void goToFloor(int floorNum) {
-        if (this.activeFloor == -1) {
-            throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");
-        }
-        if (floorNum < 1 || floorNum > this.nFloors) {
-            throw new RuntimeException("Invalid floor number. Valid range for this Building is 1-" + this.nFloors +".");
-        }
-        System.out.println("You are now on floor #" + floorNum + " of " + this.name);
-        this.activeFloor = floorNum;
-    }
-
-    public void goUp() {
-        this.goToFloor(this.activeFloor + 1);
-    }
-
-    public void goDown() {
-        this.goToFloor(this.activeFloor - 1);
-    }
-
     public void goEast() {
-        System.out.println("You head east");
+        ;
     }
     
     public void goWest() {
-        if (this.name.equals("Car")) {
-            System.out.println("You head west");
-        } else if (this.name.equals("Grocery Store")) {
-            System.out.println("You head west");
-        } else if (this.name.equals("Crumbl Shop")) {
-            System.out.println("You head west");
-        } else {
-            System.out.println("There's nothing to the west from here.");
-        }
+        ;
     }
     
     public void goNorth() {
-        if (this.name.equals("Car")) {
-            System.out.println("You head north");
-        } else if (this.name.equals("House")) {
-            System.out.println("You head north");
-        } else if (this.name.equals("Crumbl Shop")) {
-            System.out.println("You head north");
-        } else {
-            System.out.println("There's nothing to the north from here.");
-        }
+        ;
     }
     
     public void goSouth() {
-        if (this.name.equals("Crumbl Shop")) {
-            System.out.println("You head south");
-        } else if (this.name.equals("Car")) {
-            System.out.println("You head south");
-        } else if (this.name.equals("Grocery Store")) {
-            System.out.println("You head south");
-        } else {
-            System.out.println("There's nothing to the south from here.");
-        }
+        ;
     }
     
 
     public void showOptions() {
-        System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n) + \n goEast() + \n goWest() + \n goNorth() + \n goSouth()");
+        System.out.println("Available options at " + this.name + ":\n + enter \n + go east \n + go west \n + go north \n + go south");
     }
 
     public String toString() {

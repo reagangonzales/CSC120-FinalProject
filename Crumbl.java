@@ -7,6 +7,7 @@ public class Crumbl extends Location {
     private boolean hasBlended;
     private boolean hasBaked;
     private boolean hasDecorated;
+    private boolean isBaking;
 
     public Crumbl(String address, int nFloors, int nRooms) {
         super("Crumbl Shop", address, nFloors, nRooms);
@@ -17,6 +18,13 @@ public class Crumbl extends Location {
         hasBlended = false;
         hasBaked = false;
         hasDecorated = false;
+        isBaking = false;
+    }
+
+    public void showOptions() {
+        super.showOptions();
+        System.out.println("Stations in Crumbl: 3");
+        System.out.println("\n+ blend \n + bake cookie \n + decorate cookie + \n + sell cookie");
     }
 
     public void useBlender(int eggs, Player player) {
@@ -37,21 +45,31 @@ public class Crumbl extends Location {
     }
 
     public void bakeCookie() {
-        if (hasBlended) {
-            hasBaked = true;
-            System.out.println("You baked the cookie! It smells amazing.");
+        if (isBaking) {
+            System.out.println("The cookie is already baking!");
         } else {
-            System.out.println("You need to blend ingredients first.");
+            // Start baking the cookie
+            System.out.println("Baking the cookie...");
+            isBaking = true;
+
+            // Simulate baking time
+            try {
+                Thread.sleep(3000); // This simulates the time it takes to bake the cookie (3 seconds)
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // After baking is complete, we might want to notify the player
+            System.out.println("Cookie is done baking!");
+
+            // Reset the baking status for the next round
+            isBaking = false;
         }
     }
 
     public void decorateCookie() {
-        if (hasBaked) {
-            hasDecorated = true;
-            System.out.println("You decorated the cookie beautifully!");
-        } else {
-            System.out.println("You need to bake the cookie first.");
-        }
+        hasDecorated = true; 
+        System.out.println("You decorated the cookie beautifully!");
     }
 
     public int sellCookie(int eggs, Player player) {
@@ -71,7 +89,7 @@ public class Crumbl extends Location {
         return hasBlended && hasBaked && hasDecorated;
     }
 
-    private void resetCookieState() {
+    public void resetCookieState() {
         hasBlended = false;
         hasBaked = false;
         hasDecorated = false;

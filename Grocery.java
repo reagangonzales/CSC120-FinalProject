@@ -25,18 +25,7 @@ public class Grocery extends Location {
 
     public void showOptions() {
         super.showOptions();
-        System.out.println(" + findIngredient(ingredient) \n + getIngredients() \n + go east, go west, go north");
-    }
-
-    public void goEast() {
-        System.out.println("You head east to the flour aisle.");
-    }
-
-    public void goWest() {
-        System.out.println("You head west to the sugar aisle.");
-    }
-
-    public void goNorth() {
-        System.out.println("You head north to the eggs aisle.");
+        System.out.println("Aisles in Grocery Store: 3");
+        System.out.println("find (ingredient)");
     }
 }
