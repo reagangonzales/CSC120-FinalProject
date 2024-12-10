@@ -175,7 +175,7 @@ public class GameLoop {
                     if (player.getCurrentLocation() == grocery) { // Check if the player is at the Grocery store
                         if (player.getInventory().hasItem("keys") && player.getInventory().hasItem("phone")) {
                             System.out.println("You enter the grocery store.");
-                            System.out.println("Try to find as many ingredients as you can! Nina");
+                            System.out.println("Try to find as many ingredients as you can!");
                             inGroceryStore = true;
                             currentAisle = "";
                         } else {
@@ -405,7 +405,7 @@ public class GameLoop {
         if (userResponse.equals("quit")) {
             System.out.println("Goodbye");
         } else if (player.getMoney() >= 100.0) { 
-            System.out.println("Congrats! You won the game!");
+            System.out.println("Congrats! You won the game by making over $100!");
         } else {
             System.out.println("You lost! Try again");
         }
