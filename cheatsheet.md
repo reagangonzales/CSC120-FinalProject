@@ -7,6 +7,8 @@ At the car: drive east, drive west, drive north
 At the grocery store: enter grocery store, go north, go west, go east, go south, find eggs, find flour, find butter, find sugar, find chocolate, find peanut butter, find baking soda, find baking powder, find vanilla
 At crumbl shop: go north, go east, go west, leave crumbl, enter crumbl, blend, bake cookie, decorate cookie, sell cookie, eat cookie,(if a player eats their baked cookie, it ruins their chances of selling their cookie and they have to go back to the grocery store to get ingredients again and reblend, or if they eat their cookie not baked, they die)
 
+Map of game: House is to the west, Crumbl to the north, Grocery store to the east. In the house: Entrance, living room to the north of the entrance, kitchen to the north of the entrance. In Grocery store: Aisles are north, west, and east. In Crumbl: stations are north, west, and east
+
 
 # SPOILER ALERT
 
