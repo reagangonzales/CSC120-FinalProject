@@ -59,7 +59,7 @@ public class Crumbl extends Location {
                 e.printStackTrace();
             }
 
-            // After baking is complete, we might want to notify the player
+            // After baking is complete, notify the player
             System.out.println("Cookie is done baking!");
 
             // Reset the baking status for the next round
