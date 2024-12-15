@@ -53,10 +53,11 @@ public class Crumbl extends Location {
             isBaking = true;
 
             // Simulate baking time
+            // Source: https://www.baeldung.com/java-delay-code-execution
             try {
                 Thread.sleep(3000); // This simulates the time it takes to bake the cookie (3 seconds)
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
 
             // After baking is complete, notify the player
